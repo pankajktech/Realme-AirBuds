@@ -11,20 +11,29 @@
 </head>
 
 <body class="m-0 p-0 bg-gradient-to-b from-slate-100 to-pink-200 min-h-screen">
-    <nav class="flex flex-col md:flex-row items-center md:justify-around bg-gray-800 p-2">
-        <img src="https://klgadgetguy.com/wp-content/uploads/2019/02/Realme-Logo-2.jpg"
-            alt="Realme Logo" class="w-10 h-10 ">
-        <ul class=" flex gap-1 md:gap-6">
-            <li class=""><a href="" class="text-sm md:text-xl text-slate-100 hover:text-blue-300 font-bold">Home</a></li>
-            <li class=""><a href="" class="text-sm md:text-xl text-slate-100 hover:text-blue-300 font-bold">Contact Us</a></li>
-            <li class=""><a href="" class="text-sm md:text-xl text-slate-100 hover:text-blue-300 font-bold">About Us</a></li>
-            <li class=""><a href="" class="text-sm md:text-xl text-slate-100 hover:text-blue-300 font-bold">Disclaimer</a></li>
+    <nav class="flex flex-row items-center justify-between md:justify-around bg-gray-800 p-2 md:p-0">
+        <img src="https://klgadgetguy.com/wp-content/uploads/2019/02/Realme-Logo-2.jpg" alt="Realme Logo"
+            class="w-8 h-8 ml-4 ">
+        <ul
+            class="duration-500 flex flex-col items-center mx-auto md:flex-row md:m-4 md:items-center cursor-pointer absolute md:static  w-full left-0 md:w-auto h-64 md:h-auto bg-gray-800 top-[-100%] gap-6 p-1">
+            <li class=""><a href="" class="text-sm md:text-xl text-slate-100 hover:text-blue-300 font-bold">Home</a>
+            </li>
+            <li class=""><a href="" class="text-sm md:text-xl text-slate-100 hover:text-blue-300 font-bold">Contact
+                    Us</a></li>
+            <li class=""><a href="" class="text-sm md:text-xl text-slate-100 hover:text-blue-300 font-bold">About Us</a>
+            </li>
+            <li class=""><a href=""
+                    class="text-sm md:text-xl text-slate-100 hover:text-blue-300 font-bold">Disclaimer</a></li>
+            <span class="flex my-2 md:my-0 md:ml-28">
+                <a href="https://amzn.to/3yiMKxn"
+                    class=" hover:bg-gray-100 text-gray-100 hover:text-gray-900 p-1 bg-transparent ring-1 ring-gray-100 rounded w-36 text-xl text-center items-center mx-auto mb-4">Buy
+                    Now</a>
+            </span>
         </ul>
-        <span class="flex">
-            <a href="https://amzn.to/3yiMKxn"
-                class=" text-slate-100 hover:bg-slate-100 hover:text-gray-900 p-1 bg-transparent ring-2 ring-slate-100 rounded w-32 text-xl text-center items-center font-bold">Buy
-                Now</a>
-        </span>
+
+        <div class="md:hidden text-gray-100">
+            <ion-icon name="menu-outline" class="text-2xl mr-4 cursor-pointer" onclick="onToggleMenu(this)"></ion-icon>
+        </div>
 
     </nav>
 
@@ -35,7 +44,7 @@
                 <img src="./src/airbuds.png" alt="airBuds 3 Pro" class="md:h-[550px]">
             </div>
 
-            <div class="md:ml-40">
+            <div class="md:mx-40">
                 <h1
                     class=" text-3xl sm:text-6xl  font-semibold mt-10 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 md:order-first ">
                     Realme Buds Air Pro</h1>
@@ -51,7 +60,7 @@
                 </ol>
                 <span class="flex mx-auto my-10">
                     <a href="https://amzn.to/3yiMKxn"
-                        class=" hover:bg-gray-900 hover:text-gray-100 p-2 bg-transparent ring-2 ring-slate-900 rounded md:w-64 text-xl text-center items-center font-bold ml-auto mr-auto mb-4">Buy
+                        class=" hover:bg-gray-900 hover:text-gray-100 p-1 bg-transparent ring-2 ring-slate-900 rounded w-36 md:w-64 text-2xl text-center items-center font-bold mx-auto mb-4">Buy
                         Now</a>
                 </span>
             </div>
@@ -68,6 +77,20 @@
         <div class="bg-slate-900 text-center py-2 bottom-0 text-slate-100">
             <p class="text-xl font-bold">Made with ❤️ by <a href="Pankaj Kumar" class="text-blue-300">Pankaj Kumar</a>
     </footer>
+
+
+    <script>
+        function onToggleMenu(icon) {
+            icon.name = icon.name === 'menu-outline' ? 'close-outline' : 'menu-outline';
+            const nav = document.querySelector('ul');
+            nav.classList.toggle('top-[5%]');
+        }
+    </script>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
